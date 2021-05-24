@@ -7,13 +7,22 @@ public class Main {
 
         buyDrink(dan);
         buyDrink(naz);
+        printName(dan);
+        printName(naz);
+
     }
 
-    private static void buyDrink(Student student){
-        if(student.isUnderAge()){
-            System.out.printf("%s is not old enough\n", student.getDescription());
+    private static void buyDrink(Student dave){
+        if(dave.isUnderAge()){
+            System.out.printf("%s is not old enough\n", dave.getDescription());
         } else {
-            System.out.printf("Here's your beer %s\n", student.getDescription());
+            System.out.printf("Here's your beer %s\n", dave.getDescription());
         }
+    }
+
+    private static void printName(Student student) {
+        System.out.println(student.getDescription());
+
+
     }
 }
